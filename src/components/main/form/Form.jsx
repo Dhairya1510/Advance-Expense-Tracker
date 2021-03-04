@@ -23,7 +23,7 @@ function Form() {
    const [open, setOpen] = useState(false);
 
    const createTransaction = () => {
-     if(Number.isNaN(Number(formData.amount)) || !formData.date.includes('-')) return;
+    if(!formData.amount.length || !formData.date.includes('-') || !formData.category) return;
 
       const transaction = { ...formData, amount: Number(formData.amount), id: uuidv4()}
       

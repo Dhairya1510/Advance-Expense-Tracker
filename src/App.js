@@ -23,19 +23,20 @@ const App = () => {
 
   return (
     <div>
-     <Grid className={classes.grid} container spacing={0} alignItems="center" justify="center" style={{height : '100vh'}}>
-       <Grid item xs={12} sm={4} className={classes.mobile}>
+     <Grid container  className={classes.grid}>
+       
+       <Grid item             xs={12} sm={6} md={4} className={classes.income}>
          <Details title="Income"/>
        </Grid>
-       <Grid  ref={main} item xs={12} sm={3} className={classes.main}>
+
+       <Grid item ref={main}  xs={12} sm={12} md={4} className={classes.main}>
          <Main />
        </Grid>
-       <Grid item xs={12} sm={4} className={classes.desktop}>
-         <Details title="Income"/>
-       </Grid>
-       <Grid item xs={12} sm={4} className={classes.last}>
+       
+       <Grid item             xs={12} sm={6} md={4} className={classes.expense}>
          <Details title="Expense"/>
        </Grid>
+
      </Grid>
      <PushToTalkButtonContainer>
        <PushToTalkButton/>

@@ -6,7 +6,7 @@ import { ExpenseTrackerContext } from '../../../context/context'
 
 function List() {
   const classes = useStyles();
-  const { deleteTransaction, transactions } = useContext(ExpenseTrackerContext);
+  const { deleteTransaction, transactions, resetTransactions } = useContext(ExpenseTrackerContext);
 
  
   return (
@@ -28,6 +28,7 @@ function List() {
         </ListItem>
       </Slide>
     ))}
+    <IconButton aria-label="Reset" onClick={()=> resetTransactions()}>RESET</IconButton>
   </MUIList>
   )
 }
